@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
   NOME_DB = "db.m340"
   
   # WEB
-  config.vm.define "web" do |subconfig|
+  config.vm.define NOME_WEB do |subconfig|
     subconfig.vm.box = BOX_IMAGE
     subconfig.vm.hostname = NOME_WEB 
     
@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
   end
   
   # DB
-  config.vm.define "db" do |subconfig|
+  config.vm.define NOME_DB do |subconfig|
     subconfig.vm.box = BOX_IMAGE
     subconfig.vm.hostname = NOME_DB 
     
